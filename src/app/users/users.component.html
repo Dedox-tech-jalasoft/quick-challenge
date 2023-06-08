@@ -18,12 +18,12 @@
     <tbody>
       <tr *ngFor="let user of userLocationData">
         <td>{{ user.city }}</td>
-        <td>{{ user.coordinates.latitude }}, {{ user.coordinates.longitude }}</td>
+        <td>{{ user.coordinates.latitude }} , {{ user.coordinates.longitude }}</td>
         <td>{{ user.country }}</td>
         <td>{{ user.postcode }}</td>
         <td>{{ user.state }}</td>
         <td>{{ user.street.number }} , {{ user.street.name }}</td>
-        <td>{{ user.timezone.description }},{{ user.timezone.offset }}</td>
+        <td>{{ user.timezone.description }} , {{ user.timezone.offset }}</td>
       </tr>
     </tbody>
   </table>
