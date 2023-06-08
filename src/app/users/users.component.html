@@ -1,28 +1,30 @@
 <h1>User information</h1>
-<table>
-  <thead>
-    <tr>
-      <th>User data</th>
-    </tr>
-    <tr>
-      <td>City</td>
-      <td>Coordinates</td>
-      <td>Country</td>
-      <td>Postcode</td>
-      <td>State</td>
-      <td>Street</td>
-      <td>Timezone</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of userLocationData">
-      <td>{{ user.city }}</td>
-      <td>{{ user.coordinates.latitude }}, {{ user.coordinates.longitude }}</td>
-      <td>{{ user.country }}</td>
-      <td>{{ user.postcode }}</td>
-      <td>{{ user.state }}</td>
-      <td>{{ user.street.number }} , {{ user.street.name }}</td>
-      <td>{{ user.timezone.description }},{{ user.timezone.offset }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th colspan="7" class="heading">User data</th>
+      </tr>
+      <tr class="header-columns">
+        <td>City</td>
+        <td>Coordinates</td>
+        <td>Country</td>
+        <td>Postcode</td>
+        <td>State</td>
+        <td>Street</td>
+        <td>Timezone</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userLocationData">
+        <td>{{ user.city }}</td>
+        <td>{{ user.coordinates.latitude }}, {{ user.coordinates.longitude }}</td>
+        <td>{{ user.country }}</td>
+        <td>{{ user.postcode }}</td>
+        <td>{{ user.state }}</td>
+        <td>{{ user.street.number }} , {{ user.street.name }}</td>
+        <td>{{ user.timezone.description }},{{ user.timezone.offset }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
