@@ -9,7 +9,7 @@ import { UserLocation } from '../models/userLocation.model';
 export class UsersService {
   constructor(private readonly httpClient: HttpClient) {}
 
-  /* This method need to map the Observable stream and then map 
+  /* This method need to map the Observable stream first and then map 
   the final array for passing only the location data to the component */
   getUserData(): Observable<UserLocation[]> {
     return this.httpClient

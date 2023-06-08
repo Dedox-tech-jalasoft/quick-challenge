@@ -15,34 +15,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let element of userLocationData">
-      <td>
-        {{ element.city }}
-      </td>
-      <td>
-        {{ element.coordinates.latitude }}
-        ,
-        {{ element.coordinates.longitude }}
-      </td>
-      <td>
-        {{ element.country }}
-      </td>
-      <td>
-        {{ element.postcode }}
-      </td>
-      <td>
-        {{ element.state }}
-      </td>
-      <td>
-        {{ element.street.number }}
-        ,
-        {{ element.street.name }}
-      </td>
-      <td>
-        {{ element.timezone.description }}
-        ,
-        {{ element.timezone.offset }}
-      </td>
+    <tr *ngFor="let user of userLocationData">
+      <td>{{ user.city }}</td>
+      <td>{{ user.coordinates.latitude }}, {{ user.coordinates.longitude }}</td>
+      <td>{{ user.country }}</td>
+      <td>{{ user.postcode }}</td>
+      <td>{{ user.state }}</td>
+      <td>{{ user.street.number }} , {{ user.street.name }}</td>
+      <td>{{ user.timezone.description }},{{ user.timezone.offset }}</td>
     </tr>
   </tbody>
 </table>
