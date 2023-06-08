@@ -4,7 +4,7 @@ import { UsersService } from '../core/services/users.service';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
   constructor(private readonly userService: UsersService) {}
@@ -13,9 +13,8 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getUserData().subscribe((data) => {
-      this.userLocationData = data.results.map((user: any) => user.location)
+      this.userLocationData = data.results.map((user: any) => user.location);
       console.log(this.userLocationData);
     });
   }
-
 }
